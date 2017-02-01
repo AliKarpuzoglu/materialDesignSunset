@@ -1,0 +1,85 @@
+---
+layout: default 
+--- 
+ 
+<div class ="blog--post">
+
+        <div class="blog__posts mdl-grid">
+          <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+                {% if page.image  == "" or page.image == nil %}
+            <div class="mdl-card__media mdl-color-text--grey-50">
+                 {% else %}
+        <div class="mdl-card__media mdl-color-text--grey-50" style="background: url( {{page.image}}) center/cover; ">
+   {% endif %}
+
+              <h3>{{ page.title }}</h3>  
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+              <div class="minilogo"></div>
+              <div>
+                <strong>{{page.author}}</strong>
+                <span>{{page.date}}</span>
+              </div>
+              <div class="section-spacer"></div>
+              <div>
+                <i class="material-icons" role="presentation">bookmark</i>
+                <span class="visuallyhidden">bookmark</span>
+              </div>
+              <div>
+                <button id="share-menu"
+        class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons" role="presentation">share</i>
+                
+                <span class="visuallyhidden">share</span>
+                </button>
+              </div>
+
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="share-menu">
+
+
+                 <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">
+                 <li class="mdl-menu__item">Twitter</li>
+                 </a>
+    <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook">                  
+              <li class="mdl-menu__item">Facebook</li></a>
+
+             <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ page.description }}&source=AliKarpuzoglu">
+
+              <li class="mdl-menu__item mobile">LinkedIn</li></a>
+            </ul>
+
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+                {{content}}
+                 {{include _comments}}
+            </div>
+           
+          </div>
+
+          <nav class="nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+              {% if page.next.url %}
+
+            <a href="{{page.next.url}}" class="next nav__button">
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+              </button>
+              {{page.next.title}}
+            </a>
+              {% endif %}
+
+            <div class="section-spacer"></div>
+             {% if page.previous.url %}
+            <a href="{{page.previous.url}}" class="prev nav__button">
+              {{page.previous.title}}
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+              </button>
+            </a>
+              {% endif %}
+
+
+          </nav>
+  
+        </div>       </div>
+        

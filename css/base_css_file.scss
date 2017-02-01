@@ -1,0 +1,149 @@
+--- 
+#jekyll 
+--- 
+
+@import "base";
+
+@import "syntax-firewatch";
+
+.blog .blog__posts>.nav {
+    margin: 12px 15px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+}
+
+.blog .blog__posts>.nav>.nav__button {
+    color: white;
+    text-decoration: none;
+}
+
+.blog .section-spacer {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.blog .meta {
+    box-sizing: border-box;
+    padding: 16px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: auto;
+}
+
+.blog .meta>* {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.blog--blogpost .meta>* {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.blog .mdl-card__supporting-text.meta {
+    width: 100%;
+    padding: 16px;
+    min-height: 64px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.blog--post .mdl-card__supporting-text p {
+    max-width: 512px;
+    margin: 16px auto;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.blog .blog__posts {
+    max-width: 900px;
+    padding: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.blog--post .back {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    color: white;
+    z-index: 9999;
+}
+
+.highlight .lineno{
+    word-break: keep-all;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.gutter.gl{
+    text-align: right;
+    padding-right: 15px;
+    padding-left: 5px;
+    border-right: 1px solid #aaa;
+}
+.highlight .code{
+    padding-left: 10px;
+}
+.highlight{
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.blog--post .mdl-card__supporting-text{
+    margin: auto;
+}
+.blog__posts .mdl-card__media{
+    height:170px;
+}
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button ,
+.mdl-layout__header-row .mdl-navigation__link
+
+{
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+
+.blog--post img{
+    max-width: 100%
+}
